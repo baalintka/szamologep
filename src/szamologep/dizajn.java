@@ -10,11 +10,11 @@ package szamologep;
  */
 public class Dizajn extends javax.swing.JFrame {
 
-    /**
-     * Creates new form dizajn
-     */
+    int a =0;
+    int b =0;
     public Dizajn() {
         initComponents();
+        
     }
 
     /**
@@ -27,7 +27,7 @@ public class Dizajn extends javax.swing.JFrame {
     private void initComponents() {
 
         gomb1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        kiir = new javax.swing.JTextField();
         gomb4 = new javax.swing.JButton();
         gomb7 = new javax.swing.JButton();
         gomb2 = new javax.swing.JButton();
@@ -47,27 +47,52 @@ public class Dizajn extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         gomb1.setText("1");
-        gomb1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb1ActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 3));
+        kiir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        kiir.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        kiir.setText("0");
+        kiir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 0, 153), 3));
 
         gomb4.setText("4");
-        gomb4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb4ActionPerformed(evt);
+            }
+        });
 
         gomb7.setText("7");
-        gomb7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb7ActionPerformed(evt);
+            }
+        });
 
         gomb2.setText("2");
-        gomb2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb2ActionPerformed(evt);
+            }
+        });
 
         gomb5.setText("5");
-        gomb5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb5ActionPerformed(evt);
+            }
+        });
 
         gomb8.setText("8");
-        gomb8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         gomb8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gomb8ActionPerformed(evt);
@@ -75,37 +100,63 @@ public class Dizajn extends javax.swing.JFrame {
         });
 
         gomb6.setText("6");
-        gomb6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb6ActionPerformed(evt);
+            }
+        });
 
         gomb9.setText("9");
-        gomb9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb9ActionPerformed(evt);
+            }
+        });
 
         szazalek.setText("%");
-        szazalek.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        szazalek.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         szorzas.setText("*");
-        szorzas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        szorzas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         kivonas.setText("-");
-        kivonas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        kivonas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         osszeadas.setText("+");
-        osszeadas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        osszeadas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        osszeadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                osszeadasActionPerformed(evt);
+            }
+        });
 
         gomb0.setText("0");
-        gomb0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb0ActionPerformed(evt);
+            }
+        });
 
         gomb3.setText("3");
-        gomb3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        gomb3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gomb3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gomb3ActionPerformed(evt);
+            }
+        });
 
         egyenlo.setText("=");
-        egyenlo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 2));
+        egyenlo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("Számológép");
         jTextField2.setActionCommand("<Not Set>");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0), 3));
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 0, 153), 3));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +196,7 @@ public class Dizajn extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextField2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(kiir, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -153,7 +204,7 @@ public class Dizajn extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kiir, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -185,8 +236,50 @@ public class Dizajn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void gomb8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb8ActionPerformed
-        // TODO add your handling code here:
+        kiir.setText("8");
     }//GEN-LAST:event_gomb8ActionPerformed
+
+    private void gomb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb1ActionPerformed
+        kiir.setText("1");
+        a=1;
+    }//GEN-LAST:event_gomb1ActionPerformed
+
+    private void gomb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb2ActionPerformed
+        kiir.setText("2");
+        b=2;
+    }//GEN-LAST:event_gomb2ActionPerformed
+
+    private void gomb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb3ActionPerformed
+        kiir.setText("3");
+    }//GEN-LAST:event_gomb3ActionPerformed
+
+    private void gomb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb4ActionPerformed
+        kiir.setText("4");
+    }//GEN-LAST:event_gomb4ActionPerformed
+
+    private void gomb5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb5ActionPerformed
+        kiir.setText("5");
+    }//GEN-LAST:event_gomb5ActionPerformed
+
+    private void gomb6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb6ActionPerformed
+        kiir.setText("6");
+    }//GEN-LAST:event_gomb6ActionPerformed
+
+    private void gomb7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb7ActionPerformed
+        kiir.setText("7");
+    }//GEN-LAST:event_gomb7ActionPerformed
+
+    private void gomb9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb9ActionPerformed
+        kiir.setText("9");
+    }//GEN-LAST:event_gomb9ActionPerformed
+
+    private void gomb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gomb0ActionPerformed
+        kiir.setText("0");
+    }//GEN-LAST:event_gomb0ActionPerformed
+
+    private void osszeadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_osszeadasActionPerformed
+        osszead();
+    }//GEN-LAST:event_osszeadasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,11 +329,16 @@ public class Dizajn extends javax.swing.JFrame {
     private javax.swing.JButton gomb7;
     private javax.swing.JButton gomb8;
     private javax.swing.JButton gomb9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField kiir;
     private javax.swing.JButton kivonas;
     private javax.swing.JButton osszeadas;
     private javax.swing.JButton szazalek;
     private javax.swing.JButton szorzas;
     // End of variables declaration//GEN-END:variables
+
+    private int osszead() {
+        int c = a + b;
+        return c;
+    }
 }
