@@ -66,6 +66,11 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel1.setText("Autómosó");
 
         wax.setText("Wax");
+        wax.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                waxItemStateChanged(evt);
+            }
+        });
         wax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 waxActionPerformed(evt);
@@ -194,7 +199,7 @@ public class Dizajn extends javax.swing.JFrame {
                                                 .addComponent(jLabel5)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(0, 12, Short.MAX_VALUE)
+                                        .addGap(0, 18, Short.MAX_VALUE)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(52, 52, 52)))
                                 .addComponent(autogomb)
@@ -225,10 +230,12 @@ public class Dizajn extends javax.swing.JFrame {
                                 .addComponent(jButton2))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -290,9 +297,14 @@ public class Dizajn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kulsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kulsoActionPerformed
-        arset=0;
-        arset+=6400;
-        ar.setText(arset+"Ft");
+        if (kulso.isSelected()) {
+            arset=0;
+            arset+=6400;
+            ar.setText(arset+"Ft");
+        }
+        
+
+        
     }//GEN-LAST:event_kulsoActionPerformed
 
     private void belsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_belsoActionPerformed
@@ -312,15 +324,27 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void waxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waxActionPerformed
-        arset+=2500;
-        ar.setText(arset+"Ft");
+        if (wax.isSelected()) {
+            
+            arset+=2500;
+            ar.setText(arset+"Ft");
+        }else{
+            arset-=2500;
+            ar.setText(arset+"Ft");
+        }
         
         
     }//GEN-LAST:event_waxActionPerformed
 
     private void muanyagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muanyagActionPerformed
-        arset+=3000;
-        ar.setText(arset+"Ft");
+        if (muanyag.isSelected()) {
+            
+            arset+=3000;
+            ar.setText(arset+"Ft");
+        }else{
+            arset-=3000;
+            ar.setText(arset+"Ft");
+        }
     }//GEN-LAST:event_muanyagActionPerformed
 
     private void keziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keziActionPerformed
@@ -329,8 +353,16 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_keziActionPerformed
 
     private void gepiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gepiActionPerformed
-        arset+=4800;
-        ar.setText(arset+"Ft");
+        if (kulso.isSelected()) {
+            arset+=4800;
+            arset+=6400;
+            ar.setText(arset+"Ft");
+        }else{
+            arset+=4800;
+            arset+=8200;
+            ar.setText(arset+"Ft");
+        }
+        
     }//GEN-LAST:event_gepiActionPerformed
 
     private void hirlevelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hirlevelActionPerformed
@@ -340,6 +372,10 @@ public class Dizajn extends javax.swing.JFrame {
     private void hirlevelItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_hirlevelItemStateChanged
         JOptionPane.showMessageDialog(null, "Ön feliratkozott a hírlevélre!", "hírlevél", 2);
     }//GEN-LAST:event_hirlevelItemStateChanged
+
+    private void waxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_waxItemStateChanged
+        
+    }//GEN-LAST:event_waxItemStateChanged
 
     /**
      * @param args the command line arguments
