@@ -1,5 +1,5 @@
 
-package szamologep;
+package automoso;
 
 
 public class Szamologep {
