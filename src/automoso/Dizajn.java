@@ -51,7 +51,7 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         gepi = new javax.swing.JCheckBox();
         kezi = new javax.swing.JCheckBox();
         hirlevel = new javax.swing.JCheckBox();
@@ -93,7 +93,6 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel3.setText("Extra szolgáltatások:");
 
-        buttonGroup1.add(kulso);
         kulso.setText("Külső mosás");
         kulso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +100,6 @@ public class Dizajn extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(belso);
         belso.setText("Belső takarítás");
         belso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +146,12 @@ public class Dizajn extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("E-mail:");
+
+        email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailActionPerformed(evt);
+            }
+        });
 
         gepi.setText("Gépi polírozás");
         gepi.addItemListener(new java.awt.event.ItemListener() {
@@ -245,7 +249,7 @@ public class Dizajn extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(hirlevel, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
@@ -289,7 +293,7 @@ public class Dizajn extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -310,9 +314,14 @@ public class Dizajn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kulsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kulsoActionPerformed
-            arset=0;
+            if (kulso.isSelected()) {
+            
             arset+=6400;
             ar.setText(arset+"Ft");
+            }else{
+                arset-=6400;
+                ar.setText(arset+"Ft");
+            }
         
         
 
@@ -320,9 +329,14 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_kulsoActionPerformed
 
     private void belsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_belsoActionPerformed
-        arset=0;
-        arset+=8200;
-        ar.setText(arset+"Ft");
+        if (belso.isSelected()) {
+            
+            arset+=8200;
+            ar.setText(arset+"Ft");
+        }else{
+            arset-=8200;
+            ar.setText(arset+"Ft");
+        }
     }//GEN-LAST:event_belsoActionPerformed
 
     private void autogombActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autogombActionPerformed
@@ -398,6 +412,11 @@ public class Dizajn extends javax.swing.JFrame {
          
     }//GEN-LAST:event_gepikeziItem
 
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        
+        JOptionPane.showMessageDialog(null, "Biztosan jó e-mail címet adott meg? : "+email.getText(), "e-mail", 2);
+    }//GEN-LAST:event_emailActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -439,6 +458,7 @@ public class Dizajn extends javax.swing.JFrame {
     private javax.swing.JButton autogomb;
     private javax.swing.JRadioButton belso;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField email;
     private javax.swing.JCheckBox gepi;
     private javax.swing.JCheckBox hirlevel;
     private javax.swing.JLabel jLabel1;
@@ -454,7 +474,6 @@ public class Dizajn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox<String> jarmuvalaszt;
     private javax.swing.JCheckBox kezi;
     private javax.swing.JRadioButton kulso;
