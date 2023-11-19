@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Dizajn extends javax.swing.JFrame {
     String kiiras="";
+    int arset=0;
     
     public Dizajn() {
         initComponents();
@@ -30,11 +31,12 @@ public class Dizajn extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        wax = new javax.swing.JRadioButton();
+        muanyag = new javax.swing.JRadioButton();
+        kezi = new javax.swing.JRadioButton();
+        gepi = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         kulso = new javax.swing.JRadioButton();
@@ -45,6 +47,12 @@ public class Dizajn extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+
+        jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,15 +62,35 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Autómosó");
 
-        jRadioButton1.setText("Wax");
+        wax.setText("Wax");
+        wax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                waxActionPerformed(evt);
+            }
+        });
 
-        jRadioButton2.setText("Külső műanyag ápolás");
+        muanyag.setText("Külső műanyag ápolás");
+        muanyag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                muanyagActionPerformed(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Kézi polírozás");
+        buttonGroup1.add(kezi);
+        kezi.setText("Kézi polírozás");
+        kezi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keziActionPerformed(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("Gépi polírozás");
+        buttonGroup1.add(gepi);
+        gepi.setText("Gépi polírozás");
+        gepi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gepiActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel2.setText("Alap szolgáltatások:");
@@ -115,6 +143,14 @@ public class Dizajn extends javax.swing.JFrame {
 
         jLabel6.setText("8200Ft");
 
+        jLabel8.setText("2500Ft");
+
+        jLabel9.setText("3000Ft");
+
+        jLabel10.setText("3500Ft");
+
+        jLabel11.setText("4800Ft");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,14 +161,10 @@ public class Dizajn extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton3))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton4)
+                                .addComponent(gepi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(ar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,11 +186,26 @@ public class Dizajn extends javax.swing.JFrame {
                                                 .addComponent(jLabel5)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(0, 33, Short.MAX_VALUE)
+                                        .addGap(0, 35, Short.MAX_VALUE)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(52, 52, 52)))
                                 .addComponent(jButton1)
-                                .addGap(66, 66, 66))))
+                                .addGap(66, 66, 66))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(wax)
+                                        .addGap(113, 113, 113)
+                                        .addComponent(jLabel8))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(muanyag)
+                                            .addComponent(kezi))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel10)
+                                            .addComponent(jLabel9))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -187,17 +234,24 @@ public class Dizajn extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(wax)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton4)
+                    .addComponent(muanyag)
+                    .addComponent(jLabel9))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kezi)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(gepi)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
@@ -205,11 +259,13 @@ public class Dizajn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kulsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kulsoActionPerformed
-        ar.setText("6400Ft");
+        arset*=6400;
+        ar.setText(arset+"Ft");
     }//GEN-LAST:event_kulsoActionPerformed
 
     private void belsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_belsoActionPerformed
-        ar.setText("8200Ft");
+        arset*=8200;
+        ar.setText(arset+"Ft");
     }//GEN-LAST:event_belsoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -220,6 +276,28 @@ public class Dizajn extends javax.swing.JFrame {
         kiir();
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void waxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waxActionPerformed
+        arset+=2500;
+        ar.setText(arset+"Ft");
+        
+        
+    }//GEN-LAST:event_waxActionPerformed
+
+    private void muanyagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muanyagActionPerformed
+        arset+=3000;
+        ar.setText(arset+"Ft");
+    }//GEN-LAST:event_muanyagActionPerformed
+
+    private void keziActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keziActionPerformed
+        arset+=3500;
+        ar.setText(arset+"Ft");
+    }//GEN-LAST:event_keziActionPerformed
+
+    private void gepiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gepiActionPerformed
+        arset+=4800;
+        ar.setText(arset+"Ft");
+    }//GEN-LAST:event_gepiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,19 +339,24 @@ public class Dizajn extends javax.swing.JFrame {
     private javax.swing.JTextField ar;
     private javax.swing.JRadioButton belso;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JRadioButton gepi;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton kezi;
     private javax.swing.JRadioButton kulso;
+    private javax.swing.JRadioButton muanyag;
+    private javax.swing.JRadioButton wax;
     // End of variables declaration//GEN-END:variables
 
     private void kiir() {
