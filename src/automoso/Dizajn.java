@@ -157,7 +157,6 @@ public class Dizajn extends javax.swing.JFrame {
         gepi.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 gepiItemStateChanged(evt);
-                gepikeziItem(evt);
             }
         });
 
@@ -181,7 +180,7 @@ public class Dizajn extends javax.swing.JFrame {
             }
         });
 
-        jarmuvalaszt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Szemelygépjármű", "Tehergépkocsi", " ", " " }));
+        jarmuvalaszt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Szemelygépjármű", "Tehergépkocsi" }));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setText("Válasszon járműtípust:");
@@ -344,7 +343,10 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_autogombActionPerformed
 
     private void megrendelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_megrendelActionPerformed
-        kiir();
+        if (kulso.isSelected() || belso.isSelected()) {
+            kiir();
+        }else{JOptionPane.showMessageDialog(null, "Válasszon szolgáltatást!", "", 1);}
+        
         
     }//GEN-LAST:event_megrendelActionPerformed
 
@@ -385,18 +387,8 @@ public class Dizajn extends javax.swing.JFrame {
             arset-=3500;
             ar.setText(arset+"Ft");
         }
+        
     }//GEN-LAST:event_gepiItemStateChanged
-
-    private void keziItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_keziItemStateChanged
-        if (kezi.isSelected()) {
-            
-            arset+=4800;
-            ar.setText(arset+"Ft");
-        }else{
-            arset-=4800;
-            ar.setText(arset+"Ft");
-        }
-    }//GEN-LAST:event_keziItemStateChanged
 
     private void hirlevelItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_hirlevelItemStateChanged
         
@@ -408,14 +400,21 @@ public class Dizajn extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_hirlevelActionPerformed
 
-    private void gepikeziItem(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_gepikeziItem
-         
-    }//GEN-LAST:event_gepikeziItem
-
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         
         JOptionPane.showMessageDialog(null, "Biztosan jó e-mail címet adott meg? : "+email.getText(), "e-mail", 2);
     }//GEN-LAST:event_emailActionPerformed
+
+    private void keziItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_keziItemStateChanged
+        if (kezi.isSelected()) {
+            
+            arset+=4800;
+            ar.setText(arset+"Ft");
+        }else{
+            arset-=4800;
+            ar.setText(arset+"Ft");
+        }
+    }//GEN-LAST:event_keziItemStateChanged
 
     /**
      * @param args the command line arguments

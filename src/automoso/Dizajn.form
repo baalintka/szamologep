@@ -349,7 +349,7 @@
         <Property name="text" type="java.lang.String" value="G&#xe9;pi pol&#xed;roz&#xe1;s"/>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="gepiItemStateChanged,gepikeziItem"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="gepiItemStateChanged"/>
       </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="kezi">
@@ -375,11 +375,9 @@
     <Component class="javax.swing.JComboBox" name="jarmuvalaszt">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="2">
             <StringItem index="0" value="Szemelyg&#xe9;pj&#xe1;rm&#x171;"/>
             <StringItem index="1" value="Teherg&#xe9;pkocsi"/>
-            <StringItem index="2" value=" "/>
-            <StringItem index="3" value=" "/>
           </StringArray>
         </Property>
       </Properties>
