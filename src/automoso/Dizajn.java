@@ -484,9 +484,9 @@ public class Dizajn extends javax.swing.JFrame {
     private void kiir() {
         String sep = System.lineSeparator();
         if (jarmuvalaszt.getSelectedIndex()==0) {
-            kiiras="Választott autótípus: Személygépjármű"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
+            kiiras="Választott járműtípus: Személygépjármű"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
         }else{
-            kiiras="Választott autótípus: Tehergépkocsi"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
+            kiiras="Választott járműtípus: Tehergépkocsi"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
         }
         
         JOptionPane.showMessageDialog(null, kiiras, "Fizetés", HEIGHT);
