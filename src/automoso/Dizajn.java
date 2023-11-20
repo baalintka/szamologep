@@ -147,9 +147,26 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("E-mail:");
 
+        email.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                emailMouseExited(evt);
+            }
+        });
+        email.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                emailInputMethodTextChanged(evt);
+            }
+        });
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailActionPerformed(evt);
+            }
+        });
+        email.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                emailPropertyChange(evt);
             }
         });
 
@@ -491,6 +508,17 @@ public class Dizajn extends javax.swing.JFrame {
             forint6.setText("4800Ft");}
     }//GEN-LAST:event_jarmuvalasztItemStateChanged
 
+    private void emailInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_emailInputMethodTextChanged
+    }//GEN-LAST:event_emailInputMethodTextChanged
+
+    private void emailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseExited
+
+    }//GEN-LAST:event_emailMouseExited
+
+    private void emailPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_emailPropertyChange
+        
+    }//GEN-LAST:event_emailPropertyChange
+
     /**
      * @param args the command line arguments
      */
@@ -558,14 +586,18 @@ public class Dizajn extends javax.swing.JFrame {
 
     private void kiir() {
         String sep = System.lineSeparator();
+        
+        if (email.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Adjon meg email-címet! ", "e-mail", 2);
+        }else{
         if (jarmuvalaszt.getSelectedIndex()==0) {
             kiiras="Választott járműtípus: Személygépjármű"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
         }else{
             kiiras="Választott járműtípus: Tehergépkocsi"+sep+"A megrendelt szolgáltatás ára: "+ar.getText();
         }
         
-        JOptionPane.showMessageDialog(null, kiiras, "Fizetés", HEIGHT);
-        
+        JOptionPane.showMessageDialog(null, kiiras, "Fizetés", 1);
+        }
     }
 
     
