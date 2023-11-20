@@ -483,7 +483,7 @@ public class Dizajn extends javax.swing.JFrame {
             forint5.setText("3900Ft");
             forint6.setText("5000Ft");
         }else{
-        forint1.setText("6400Ft");
+            forint1.setText("6400Ft");
             forint2.setText("8200Ft");
             forint3.setText("2500Ft");
             forint4.setText("3000Ft");
