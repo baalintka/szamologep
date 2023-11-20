@@ -44,12 +44,12 @@ public class Dizajn extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         megrendel = new javax.swing.JButton();
         autogomb = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        forint1 = new javax.swing.JLabel();
+        forint2 = new javax.swing.JLabel();
+        forint3 = new javax.swing.JLabel();
+        forint4 = new javax.swing.JLabel();
+        forint5 = new javax.swing.JLabel();
+        forint6 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         gepi = new javax.swing.JCheckBox();
@@ -132,17 +132,17 @@ public class Dizajn extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("6400Ft");
+        forint1.setText("6400Ft");
 
-        jLabel6.setText("8200Ft");
+        forint2.setText("8200Ft");
 
-        jLabel8.setText("2500Ft");
+        forint3.setText("2500Ft");
 
-        jLabel9.setText("3000Ft");
+        forint4.setText("3000Ft");
 
-        jLabel10.setText("3500Ft");
+        forint5.setText("3500Ft");
 
-        jLabel11.setText("4800Ft");
+        forint6.setText("4800Ft");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("E-mail:");
@@ -181,6 +181,11 @@ public class Dizajn extends javax.swing.JFrame {
         });
 
         jarmuvalaszt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Szemelygépjármű", "Tehergépkocsi" }));
+        jarmuvalaszt.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jarmuvalasztItemStateChanged(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setText("Válasszon járműtípust:");
@@ -202,11 +207,11 @@ public class Dizajn extends javax.swing.JFrame {
                                     .addComponent(wax))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel9)
+                                    .addComponent(forint3)
+                                    .addComponent(forint5)
+                                    .addComponent(forint4)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
+                                        .addComponent(forint6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -221,11 +226,11 @@ public class Dizajn extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(belso)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel6))
+                                                .addComponent(forint2))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(kulso)
                                                 .addGap(43, 43, 43)
-                                                .addComponent(jLabel5)))
+                                                .addComponent(forint1)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
@@ -263,14 +268,14 @@ public class Dizajn extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(kulso)
-                            .addComponent(jLabel5)))
+                            .addComponent(forint1)))
                     .addComponent(autogomb, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(belso)
-                            .addComponent(jLabel6)))
+                            .addComponent(forint2)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)))
@@ -284,23 +289,23 @@ public class Dizajn extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wax)
-                    .addComponent(jLabel8))
+                    .addComponent(forint3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(muanyag)
-                    .addComponent(jLabel9))
+                    .addComponent(forint4))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(forint5)
                     .addComponent(gepi))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(kezi)
-                    .addComponent(jLabel11)
+                    .addComponent(forint6)
                     .addComponent(ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(megrendel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -313,14 +318,23 @@ public class Dizajn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kulsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kulsoActionPerformed
+            if (jarmuvalaszt.getSelectedIndex()==1) {
+                if (kulso.isSelected()) {
+
+                    arset+=7000;
+                    ar.setText(arset+"Ft");
+                }else{
+                    arset-=7000;
+                    ar.setText(arset+"Ft");}
+        }else{
             if (kulso.isSelected()) {
-            
-            arset+=6400;
-            ar.setText(arset+"Ft");
+
+                arset+=6400;
+                ar.setText(arset+"Ft");
             }else{
                 arset-=6400;
                 ar.setText(arset+"Ft");
-            }
+        }}
         
         
 
@@ -328,14 +342,23 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_kulsoActionPerformed
 
     private void belsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_belsoActionPerformed
-        if (belso.isSelected()) {
-            
-            arset+=8200;
-            ar.setText(arset+"Ft");
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            if (belso.isSelected()) {
+
+                arset+=9000;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=9000;
+                ar.setText(arset+"Ft");}
         }else{
-            arset-=8200;
-            ar.setText(arset+"Ft");
-        }
+            if (belso.isSelected()) {
+
+                arset+=8200;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=8200;
+                ar.setText(arset+"Ft");
+        }}
     }//GEN-LAST:event_belsoActionPerformed
 
     private void autogombActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autogombActionPerformed
@@ -351,27 +374,45 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_megrendelActionPerformed
 
     private void waxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waxActionPerformed
-        if (wax.isSelected()) {
-            
-            arset+=2500;
-            ar.setText(arset+"Ft");
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            if (wax.isSelected()) {
+
+                arset+=2700;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=2700;
+                ar.setText(arset+"Ft");}
         }else{
-            arset-=2500;
-            ar.setText(arset+"Ft");
-        }
+            if (wax.isSelected()) {
+
+                arset+=2500;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=2500;
+                ar.setText(arset+"Ft");
+        }}
         
         
     }//GEN-LAST:event_waxActionPerformed
 
     private void muanyagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muanyagActionPerformed
-        if (muanyag.isSelected()) {
-            
-            arset+=3000;
-            ar.setText(arset+"Ft");
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            if (muanyag.isSelected()) {
+
+                arset+=3200;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=3200;
+                ar.setText(arset+"Ft");}
         }else{
-            arset-=3000;
-            ar.setText(arset+"Ft");
-        }
+            if (muanyag.isSelected()) {
+
+                arset+=3000;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=3000;
+                ar.setText(arset+"Ft");
+        }}
     }//GEN-LAST:event_muanyagActionPerformed
 
     private void waxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_waxItemStateChanged
@@ -379,15 +420,23 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_waxItemStateChanged
 
     private void gepiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_gepiItemStateChanged
-        if (gepi.isSelected()) {
-            
-            arset+=3500;
-            ar.setText(arset+"Ft");
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            if (gepi.isSelected()) {
+
+                arset+=3900;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=3900;
+                ar.setText(arset+"Ft");}
         }else{
-            arset-=3500;
-            ar.setText(arset+"Ft");
-        }
-        
+            if (gepi.isSelected()) {
+
+                arset+=3500;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=3500;
+                ar.setText(arset+"Ft");
+        }}
     }//GEN-LAST:event_gepiItemStateChanged
 
     private void hirlevelItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_hirlevelItemStateChanged
@@ -406,15 +455,41 @@ public class Dizajn extends javax.swing.JFrame {
     }//GEN-LAST:event_emailActionPerformed
 
     private void keziItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_keziItemStateChanged
-        if (kezi.isSelected()) {
-            
-            arset+=4800;
-            ar.setText(arset+"Ft");
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            if (kezi.isSelected()) {
+
+                arset+=5000;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=5000;
+                ar.setText(arset+"Ft");}
         }else{
-            arset-=4800;
-            ar.setText(arset+"Ft");
-        }
+            if (kezi.isSelected()) {
+
+                arset+=4800;
+                ar.setText(arset+"Ft");
+            }else{
+                arset-=4800;
+                ar.setText(arset+"Ft");
+        }}
     }//GEN-LAST:event_keziItemStateChanged
+
+    private void jarmuvalasztItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jarmuvalasztItemStateChanged
+        if (jarmuvalaszt.getSelectedIndex()==1) {
+            forint1.setText("7000Ft");
+            forint2.setText("9000Ft");
+            forint3.setText("2700Ft");
+            forint4.setText("3200Ft");
+            forint5.setText("3900Ft");
+            forint6.setText("5000Ft");
+        }else{
+        forint1.setText("6400Ft");
+            forint2.setText("8200Ft");
+            forint3.setText("2500Ft");
+            forint4.setText("3000Ft");
+            forint5.setText("3500Ft");
+            forint6.setText("4800Ft");}
+    }//GEN-LAST:event_jarmuvalasztItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -458,21 +533,21 @@ public class Dizajn extends javax.swing.JFrame {
     private javax.swing.JRadioButton belso;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField email;
+    private javax.swing.JLabel forint1;
+    private javax.swing.JLabel forint2;
+    private javax.swing.JLabel forint3;
+    private javax.swing.JLabel forint4;
+    private javax.swing.JLabel forint5;
+    private javax.swing.JLabel forint6;
     private javax.swing.JCheckBox gepi;
     private javax.swing.JCheckBox hirlevel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> jarmuvalaszt;
     private javax.swing.JCheckBox kezi;
     private javax.swing.JRadioButton kulso;
